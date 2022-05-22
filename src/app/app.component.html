@@ -1,6 +1,6 @@
 <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-light" aria-label="Main navigation"> <!-- (scroll)="onWindowScroll();" -->
     <div class="container">    
-       <a class="navbar-brand logo-text" href="#">NDR</a> 
+       <a class="navbar-brand logo-text" (click)="getActive('inicio')" href="#">NDR</a> 
 
       <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -8,122 +8,111 @@
 
       <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav ms-auto navbar-nav-scroll">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#cabecera">Inicio</a>
+              <li class="nav-item" (click)="getActive('inicio')">
+                  <a class="nav-link {{Inicio}}" aria-current="page" href="#">Inicio</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" style="color: white;" href="#sobre_mi">Sobre mí</a>
+                  <a class="nav-link {{SobreMi}}" (click)="getActive('sobre_mi')" href="#sobre_mi">Sobre mí</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" style="color: white;" href="#proyectos">Proyectos</a>
+                  <a class="nav-link {{Proyectos}}" (click)="getActive('proyectos')" href="#proyectos">Proyectos</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" style="color: white;" href="#contacto">Contacto</a>
-              </li>
+              <!-- <li class="nav-item">
+                  <a class="nav-link {{Contacto}}" (click)="getActive('contacto')" href="#contacto">Contacto</a>
+              </li> -->
           </ul>
       </div> 
     </div> 
 </nav>
-
-<header id="cabecera" class="cabecera">
-  <div class="fondo"></div>
-  <div class="container text-center">
-   <!--  <div class="row"> -->
-     <!--  <div class="col-lg-5 offset-lg-3" style="text-align: center;"> -->
+<!-- INICIO -->
+<header class="cabecera">
+    <div class="fondo"></div>
+    <div class="container text-center">
         <p class="saludo">Hola, mi nombre es</p>
         <h1 class="titulo">Nelson Domínguez Riveras</h1>
         <p class="texto">Programador Junior</p>
-      <!-- </div> -->
-    <!-- </div> -->
-  </div> 
+    </div> 
 </header> 
-
-
-
+<!-- SOBRE MI -->
 <div id="sobre_mi">
     <div class="container">
         <div class="row">
-            <!-- <div class="basic-2 col-lg-6 col-xl-5"> -->
-            <div class="col-lg-6 col-xl-5" style="margin-top: 3rem;">
-                <div class="text-container">
-                    <!-- <div class="section-title">ABOUT US</div> -->
-                    <h2>Sobre mí</h2>
-                    <p style="text-align: justify;">
-                       Soy Ingeniero de Ejecución en Computación e Informática, tengo conocimiento en diversos lenguajes de programación, 
-                       además soy aficionado al aprendizaje autónomo sobre todo relacionado a lo que estudie por lo que trato 
-                       de perfeccionarme día a día.
-                        
-                        <!-- Soy ingeniero en Ejecución Informática (programador o desarrollador de programas y web o como sea).
-                       Tengo conocimiento en algunos lenguajes de programación como: bla bla bla , Javascripts, etc. , 
-                       además soy aficionado al aprendizaje sobre todo relacionado a lo que estudie por lo que trato 
-                       de perfeccionarme día a día.  También me encanta leer artículos y ver videos sobre tecnología, 
-                       ciencias exactas, astronomía, jugar juegos online y más adelante se puede ver cómo  aplico esto 
-                       último en esta web. --></p>
-                    <a href="../assets/Nelson Domínguez Riveras - CV.pdf" rel="noopener noreferrer" target="_blank">
-                        <button class="btn btn-outline-danger">
-                            <i class="fas fa-file-pdf"></i> Descargar CV
-                        </button>
-                    </a>
-                    <h2 style="margin-top: 2rem;">Skills</h2>
-                    <div class="row">
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/html5.png" alt="logo de HTML5">
-                            <p class="textoSkill">HTML</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/css-3.png" alt="logo de CSS3">
-                            <p class="textoSkill">CSS</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/bootstrap-4.svg" alt="logo de Bootstrap">
-                            <p class="textoSkill">Bootstrap</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/javascript.png" alt="logo de JavaScript">
-                            <p class="textoSkill">JavaScript</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/php.png" alt="logo de PHP">
-                            <p class="textoSkill">PHP</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/sql.svg" alt="logo de SQL">
-                            <p class="textoSkill">SQL</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/git2.svg" alt="logo de Git">
-                            <p class="textoSkill">Git</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/angular.svg" alt="logo de Angular">
-                            <p class="textoSkill">Angular</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/reactjs.svg" alt="logo de React">
-                            <p class="textoSkill">React</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/ionic.svg" alt="logo de Ionic">
-                            <p class="textoSkill">Ionic</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/node-js.png" alt="logo de NodeJS">
-                            <p class="textoSkill">NodeJS</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/mongo3.svg" alt="logo de MongoDB">
-                            <p class="textoSkill">MongoDB</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/typescript.png" alt="logo de TypeScript">
-                            <p class="textoSkill">TypeScript</p>
-                        </div>
-                        <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
-                            <img class="imgSkills" src="../assets/images/sass.svg" alt="logo de Sass">
-                            <p class="textoSkill">Sass</p>
-                        </div>
+            <div class="text-container mt-5 mb-lg-5 col-lg-6 col-xl-5">
+                <h2>Sobre mí</h2>
+                <p style="text-align: justify;">
+                    Soy Ingeniero de Ejecución en Computación e Informática (IECI), 
+                    egresado de la Universidad del Bío-Bío. Entusiasta del aprendizaje autónomo 
+                    sobre todo relacionado a lo que estudie por lo que trato de perfeccionarme 
+                    día a día.
+                </p>
+                <a href="../assets/file/Nelson Domínguez Riveras - CV.pdf" rel="noopener noreferrer" target="_blank">
+                    <button class="btn btn-outline-danger">
+                        <i class="fas fa-file-pdf"></i> Descargar CV
+                    </button>
+                </a>
+                <h2 style="margin-top: 2rem;">Skills</h2>
+                <div class="row">
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/html5.png" alt="logo de HTML5">
+                        <p class="textoSkill">HTML</p>
                     </div>
-                </div> 
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/css-3.png" alt="logo de CSS3">
+                        <p class="textoSkill">CSS</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/bootstrap.svg" alt="logo de Bootstrap">
+                        <p class="textoSkill">Bootstrap</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/javascript.png" alt="logo de JavaScript">
+                        <p class="textoSkill">JavaScript</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/php.png" alt="logo de PHP">
+                        <p class="textoSkill">PHP</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/sql.svg" alt="logo de SQL">
+                        <p class="textoSkill">SQL</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/git.svg" alt="logo de Git">
+                        <p class="textoSkill">Git</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/angular.svg" alt="logo de Angular">
+                        <p class="textoSkill">Angular</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/reactjs.svg" alt="logo de React">
+                        <p class="textoSkill">React</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/ionic.svg" alt="logo de Ionic">
+                        <p class="textoSkill">Ionic</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/node-js.png" alt="logo de NodeJS">
+                        <p class="textoSkill">NodeJS</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/mongo.svg" alt="logo de MongoDB">
+                        <p class="textoSkill">MongoDB</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/firebase.svg" alt="logo de Firebase">
+                        <p class="textoSkill">Firebase</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/typescript.png" alt="logo de TypeScript">
+                        <p class="textoSkill">TypeScript</p>
+                    </div>
+                    <div class="text-center col-lg-3 col-md-3 col-sm-3 col-4">
+                        <img class="imgSkills" src="../assets/images/sass.svg" alt="logo de Sass">
+                        <p class="textoSkill">Sass</p>
+                    </div>
+                </div>
             </div> 
             <div class="contenidos col-lg-6 col-xl-7">
                 <div class="fall">
@@ -147,23 +136,24 @@
         </div>
     </div> 
 </div> 
-  
-
+<!-- PROYECTOS-->
 <div id="proyectos" class="proyectos">
     <div class="container">
-        <div class="text-center" style="margin-bottom: 5rem;">
+        <div class="text-center pt-5 mb-5">
             <h1>Proyectos</h1>
         </div>
         <div class="row">
             <div class="col-lg-4 col-xl-4">
                 <div class="card tarjetasProyecto">
-                    <div class="fondoTarjetas">
+                    <div class="fondoVecired">
                         <div class="card-body text-center carta">
                             <h6 class="card-title tituloTarjeta">VeciRed</h6>
-                            <P class="textoTarjeta">Nextric is a demo of a full-stack social blogging platform. Authors can create content with their custom username and then post it publicly with SEO-friendly rendering, while readers can heart or like posts in real time.</P>
+                            <P class="textoTarjeta">Aplicación web y móvil para la difusión de información y gestión de actividades de las comunidades de vecinos</P>
                             <div class="tecnologias">
-                                <img class="imgTecnologias" src="../assets/images/ionic.svg" alt="">
-                                <img class="imgTecnologias" src="../assets/images/angular.svg" alt="">
+                                <img class="imgTecnologias" src="../assets/images/ionic.svg" alt="logo de Ionic">
+                                <img class="imgTecnologias" src="../assets/images/angular.svg" alt="logo de Angular">
+                                <img class="imgTecnologias" src="../assets/images/node-js.png" alt="logo de NodeJS">
+                                <img class="imgTecnologias" src="../assets/images/mongo.svg" alt="logo de MongoDB">
                             </div>
                             <div class="linksProyectos">
                                 <a class="link" href="https://github.com/Nelson508/veciRed" target="_blank"><i class="fab fa-github fa-2x icons"></i></a>
@@ -175,50 +165,18 @@
             </div>
             <div class="col-lg-4 col-xl-4">
                 <div class="card tarjetasProyecto">
-                    <div class="fondoTarjetas">
+                    <div class="fondoRutaReciclemos">
                         <div class="card-body text-center carta">
-                            <h6 class="card-title" style="color: white;">Plástico: Botellas PET</h6>
-                            <a href="/informacion#BotellasPET" class="btn btn-primary boton">Más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-4">
-                <div class="card tarjetasProyecto">
-                    <div class="fondoTarjetas">
-                        <div class="card-body text-center carta">
-                            <h6 class="card-title" style="color: white;">Plástico: Botellas PET</h6>
-                            <a href="/informacion#BotellasPET" class="btn btn-primary boton">Más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class=" col-lg-4 col-xl-4">
-                <div class="card tarjetasProyecto col-4 col-xl-4">
-                    <div class="fondoTarjetas">
-                        <div class="card-body text-center carta">
-                            <h6 class="card-title" style="color: white;">Plástico: Botellas PET</h6>
-                            <a href="/informacion#BotellasPET" class="btn btn-primary boton">Más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-4">
-                <div class="card tarjetasProyecto">
-                    <div class="fondoTarjetas">
-                        <div class="card-body text-center carta">
-                            <h6 class="card-title" style="color: white;">Plástico: Botellas PET</h6>
-                            <a href="/informacion#BotellasPET" class="btn btn-primary boton">Más información</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-xl-4">
-                <div class="card tarjetasProyecto">
-                    <div class="fondoTarjetas">
-                        <div class="card-body text-center carta">
-                            <h6 class="card-title" style="color: white;">Plástico: Botellas PET</h6>
-                            <a href="/informacion#BotellasPET" class="btn btn-primary boton">Más información</a>
+                            <h4 class="card-title tituloTarjeta">Ruta Reciclemos</h4>
+                            <P class="textoTarjeta">Landing page y sistema web de administración de datos para la empresa de reciclaje "Ruta Reciclemos".</P>
+                            <div class="tecnologias">
+                                <img class="imgTecnologias" src="../assets/images/angular.svg" alt="logo de Angular">
+                                <img class="imgTecnologias" src="../assets/images/firebase.svg" alt="logo de Firebase">
+                            </div>
+                            <div class="linksProyectos">
+                                <a class="link" href="https://github.com/Nelson508/rutaReciclemos" target="_blank"><i class="fab fa-github fa-2x icons"></i></a>
+                                <a class="link" href="https://rutareciclemos.cl" target="_blank"><i class="fas fa-globe-americas fa-2x icons"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -226,10 +184,8 @@
         </div>
   </div> 
 </div>
-
-
 <!-- FOOTER-->
-<div id="contacto" class="footer bg-gray">
+<div class="footer bg-gray">
   <div class="container-fluid">
       <div class="row">
           <div class="col-lg-6 col-md-12 col-sm-12">
@@ -247,6 +203,18 @@
              <!--  <p class="p-small statement">Distributed by <a href="https://therichpost.com/" target="_blank">Jassa</a></p> -->
              <div class="social-container">
                 <span class="fa-stack">
+                    <a href="mailto:ndominguez.riveras@gmail.com">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fas fa-envelope fa-stack-1x"></i>
+                    </a>
+                </span>
+                <span class="fa-stack">
+                    <a href="https://github.com/Nelson508">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-github fa-stack-1x"></i>
+                    </a>
+                </span>
+                <!-- <span class="fa-stack">
                     <a href="#your-link">
                         <i class="fas fa-circle fa-stack-2x"></i>
                         <i class="fab fa-facebook-f fa-stack-1x"></i>
@@ -261,12 +229,6 @@
                 <span class="fa-stack">
                     <a href="#your-link">
                         <i class="fas fa-circle fa-stack-2x"></i>
-                        <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                    </a>
-                </span>
-                <span class="fa-stack">
-                    <a href="#your-link">
-                        <i class="fas fa-circle fa-stack-2x"></i>
                         <i class="fab fa-instagram fa-stack-1x"></i>
                     </a>
                 </span>
@@ -275,15 +237,13 @@
                         <i class="fas fa-circle fa-stack-2x"></i>
                         <i class="fab fa-youtube fa-stack-1x"></i>
                     </a>
-                </span>
+                </span> -->
             </div> 
           </div> 
       </div> 
   </div> 
 </div>
-
-<!-- FIN FOOTER-->
-
+<!-- UP ARROW-->
 <button id="myBtn">
   <img src="assets/images/up-arrow.png" alt="alternative" />
 </button>

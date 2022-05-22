@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +8,36 @@ import { Component, HostListener } from '@angular/core';
 export class AppComponent {
   title = 'Portafolio';
 
-  /* @HostListener('window:scroll', ['$event'])
+  Inicio:any='active';
+  SobreMi:any;
+  Proyectos:any;
+  //Contacto:any;
 
-  onWindowScroll() {
-    let element = document.querySelector('.navbar') as HTMLElement;
-    if (window.pageYOffset > element.clientHeight) {
-      element.classList.add('navbar-inverse');
-    } else {
-      element.classList.remove('navbar-inverse');
+  getActive(value:any){
+    
+    if(value =='inicio'){
+      this.Inicio='active';
+    }else{
+      this.Inicio='';
     }
-  } */
+
+    if(value =='sobre_mi'){
+      this.SobreMi='active';
+    }else{
+      this.SobreMi='';
+    }
+
+    if(value =='proyectos'){
+      this.Proyectos='active';
+    }else{
+      this.Proyectos='';
+    }
+
+    /* if(value =='contacto'){
+      this.Contacto='active';
+    }else{
+      this.Contacto='';
+    } */
+  }
   
 }
