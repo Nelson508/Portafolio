@@ -672,7 +672,7 @@
 /******************/
 .proyectos {
 	//background-color: rgb(255, 223, 211, 0.2);
-	background-color:rgb(132, 182, 244, 0.15);
+	background-color:rgb(132, 182, 244);
 	padding-bottom: 5rem;
 }
 
@@ -757,7 +757,7 @@
 	/* display: flex;
 	flex-direction:row-reverse; */
 	position: absolute;
-	bottom: 2rem;
+	bottom: 0rem;
 	right: 2rem;
 }
 
@@ -821,7 +821,7 @@
 	margin-bottom: 1.875rem;
 }
 
-.footer .fa-stack {
+.fa-stack {
 	width: 2em;
 	margin-bottom: 1.25rem;
 	margin-right: 0.375rem;
@@ -851,4 +851,11 @@
 			color: #ffffff;
 		}
 	}
+}
+
+.colorLine{
+	background-color: #F7D917;
+/* 	overflow-x: hidden; */
+	/* margin: 0 -30.5rem; */
+	padding: 1rem 30.5rem;
 }
