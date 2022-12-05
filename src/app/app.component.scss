@@ -1,3 +1,81 @@
+/*******************************/
+/*     Efecto en el nombre    */
+/******************************/
+/* $content: --content; 
+$start-color: --start-color; 
+$end-color: --end-color; 
+$delay: --delay; */
+
+/* .base {
+	background: #000;
+	font-family: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+	display:grid;
+	place-content:center;
+	place-content: center;
+} */
+  
+
+.letras {
+	font-size: 5rem;
+	font-weight: 800;
+	letter-spacing: -0.06em;
+	text-align: center;
+}
+
+.efecto {
+	color: #fff;
+	display: block;
+	line-height: 1.1;
+	padding: 0 12px 10px;
+	position: relative;
+
+	&::before {
+		position: absolute;
+		inset: 0;
+		animation: animated 9s infinite;
+	}
+}
+
+.efecto.nelson::before{
+	background: linear-gradient(90deg, #007CF0, #00DFD8);
+	content: "Nelson";
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+}
+
+.dominguez::before{
+	background: linear-gradient(90deg, #7928CA, #FF0080);
+	content: "Domínguez";
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	animation-delay: 3s;
+}
+
+.riveras::before{
+	background: linear-gradient(90deg, #FF4D4D, #F9CB28);
+	content: "Riveras";
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	color: transparent;
+	animation-delay: 6s;
+}
+
+@keyframes animated {
+	0%,16.667%,100% {
+		opacity: 1;
+	}
+
+	33.333%,83.333% {
+		opacity: 0;
+	}
+}
+
+
 /******************/
 /*     General    */
 /******************/
